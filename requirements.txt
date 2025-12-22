@@ -1,0 +1,11 @@
+boto3==1.40.41 
+langchain
+langchain-text-splitters
+numpy==2.3.4
+pandas==2.3.3
+python-dotenv==1.1.1
+python-docx==1.2.0
+scikit-learn==1.7.2
+pymupdf==1.26.4
+dotenv
+

@@ -1,0 +1,99 @@
+{
+    "default": {
+        "output_format": "CRITICAL: Your response must be ONLY a valid JSON. Do not include any text before or after the JSON. Start your response with { and end with }. No preambles, explanations, or additional text.",
+        "schema": {
+            "response": "Response from the LLM using HTML formatting for the frontend. Use HTML tags like <p>, <br>, <strong>, <ul>, <li> etc. Use appropriate heading tags (<h2>, <h3>, <h4>) to structure the content based on section importance and hierarchy. Do NOT use Markdown.",
+            "title": "Concise, descriptive title for the entire conversation that captures the main topic/task. Should remain consistent across the conversation. If the title previously is just 'Chat', then give it another appropriate Title.",
+            "tags": [
+                "2-5 keywords about topics discussed to understand the conversation"
+            ],
+            "chat_summary": "Summarize the main topics and key information discussed in this conversation in 2-3 clear, natural sentences (~40-60 words). Use neutral language without 'I/we/you' pronouns."
+        }
+    },
+    "docComparison": {
+        "output_format": "CRITICAL: Your response must be ONLY a valid JSON - Do not include any Markdown formatting, backticks, or labels. Do not include any text before or after the JSON. Start your response with { and end with }. No preambles, explanations, or additional text.",
+        "schema": {
+            "response": "Response from the LLM using HTML formatting for the frontend. Use HTML tags like <p>, <br>, <strong>, <ul>, <li> etc. Use appropriate heading tags (<h2>, <h3>, <h4>) to structure the content based on section importance and hierarchy. Do NOT use Markdown.",
+            "differences_table": "Complete HTML table string ready to render. Format: <table><thead><tr><th>Document</th><th>Type</th><th>Location</th><th>Description</th><th>Importance</th></tr></thead><tbody><tr><td>document1</td><td>addition</td><td>Section 3.2</td><td>Added paragraph on xyz</td><td>high</td></tr>...</tbody></table>. Include all differences as table rows.",
+            "similarities": [
+                "list of key similarities (within 5 key similarities)"
+            ],
+            "supporting_details": "Supporting Details using HTML formatting within 20 words",
+            "recommendations": [
+                "Suggestions for Further Reading or Clarification within 50 words"
+            ],
+            "title": "Concise, descriptive title for the entire conversation that captures the main topic/task. Should remain consistent across the conversation. If the title previously is just 'Chat', then give it another appropriate Title.",
+            "tags": [
+                "2-5 keywords about topics discussed to understand the conversation"
+            ],
+            "chat_summary": "Summarize the main topics and key information discussed in this conversation in 2-3 clear, natural sentences (~40-60 words). Use neutral language without 'I/we/you' pronouns."
+        }
+    },
+    "qna": {
+        "output_format": "CRITICAL: Your response must be ONLY a valid JSON with the below SCHEMA. Do not include any text before or after the JSON. Start your response with { and end with }. No preambles, explanations, or additional text.",
+        "schema": {
+            "response": "Response from the LLM using HTML formatting for the frontend with sections like Answer, Supporting Details etc. Use HTML tags like <p>, <br>, <strong>, <ul>, <li> etc. Use appropriate heading tags (<h2>, <h3>, <h4>) to structure the content based on section importance and hierarchy. Do NOT use Markdown.",
+            "related_topics": [
+                "list of related topics for further exploration"
+            ],
+            "clarifying_questions": [
+                "follow up questions that can assist the user to understand the topic further"
+            ],
+            "title": "Concise, descriptive title for the entire conversation that captures the main topic/task. Should remain consistent across the conversation. If the title previously is just 'Chat', then give it another appropriate Title.",
+            "tags": [
+                "2-5 keywords about topics discussed to understand the conversation"
+            ],
+            "chat_summary": "Summarize the main topics and key information discussed in this conversation in 2-3 clear, natural sentences (~40-60 words). Use neutral language without 'I/we/you' pronouns."
+        }
+    },
+    "search": {
+        "output_format": "CRITICAL: Your response must be ONLY a valid JSON with the below SCHEMA. Do not include any text before or after the JSON. Start your response with { and end with }. No preambles, explanations, or additional text.",
+        "schema": {
+            "response": "Complete search response (with sections like Search Results, Contextual Explanation etc) from the LLM using HTML formatting for the frontend. Use HTML tags like <p>, <br>, <strong>, <ul>, <li> etc. Use appropriate heading tags (<h2>, <h3>, <h4>) to structure the content based on section importance and hierarchy. Do NOT use Markdown.",
+            "next_steps": [
+                "Suggestions for Further Exploration"
+            ],
+            "title": "Concise, descriptive title for the entire conversation that captures the main topic/task. Should remain consistent across the conversation. If the title previously is just 'Chat', then give it another appropriate Title.",
+            "tags": [
+                "2-5 keywords about topics discussed to understand the conversation"
+            ],
+            "chat_summary": "Summarize the main topics and key information discussed in this conversation in 2-3 clear, natural sentences (~40-60 words). Use neutral language without 'I/we/you' pronouns."
+        }
+    },
+    "codeReview": {
+        "output_format": "CRITICAL: Your response must be ONLY a valid JSON with the below SCHEMA. Use proper string escaping for HTML content (single backslash before special characters). Do NOT double-escape. Do NOT create nested JSON. Do NOT stringify the JSON. Do NOT wrap the JSON in another object. Start your response with { and end with }. No preamble, no trailing text, no Markdown, no backticks.",
+        "schema": {
+            "response": "Your output string containing the Code Review in HTML with sections: Code Review Summary, Correctness, Readability & Maintainability, Standardization, Security, Performance, and Improved Version. Use proper HTML tags (<h3>, <p>, <ul>, <li>, <pre>). Never nest <ul> inside <p>. For code blocks, use <pre> tags with minimal escaping of special characters.",
+            "title": "Concise, descriptive title for the entire conversation that captures the main topic/task. Should remain consistent across the conversation. If the title previously is just 'Chat', then give it another appropriate Title.",
+            "tags": [
+                "2-5 keywords about topics discussed to understand the conversation"
+            ],
+            "chat_summary": "Summarize the main topics and key information discussed in this conversation in 2-3 clear, natural sentences (~40-60 words). Use neutral language without 'I/we/you' pronouns."
+        }
+    },
+    "contentGeneration": {
+        "output_format": "CRITICAL: Your response must be ONLY a valid JSON in the below SCHEMA - Do not include any Markdown formatting, backticks, or labels. Do not include any text before or after. Start your response with { and end with }. No preambles, explanations, or additional text.",
+        "schema": {
+            "response": "Your output string in HTML format (include title, introduction, main content, and summary).",
+            "title": "Concise, descriptive title for the entire conversation that captures the main topic/task. Should remain consistent across the conversation. If the title previously is just 'Chat', then give it another appropriate Title.",
+            "tags": [
+                "2-5 keywords about topics discussed to understand the conversation"
+            ],
+            "chat_summary": "Summarize the main topics and key information discussed in this conversation in 2-3 clear, natural sentences (~40-60 words). Use neutral language without 'I/we/you' pronouns."
+        }
+    },
+    "textSummarisation": {
+        "output_format": "CRITICAL: Your response must be ONLY a valid JSON. Do not include any text before or after the JSON - Do not include any Markdown formatting, backticks, or labels. Start your response with { and end with }. No preambles, explanations, or additional text.",
+        "schema": {
+            "response": "Response from the LLM using HTML formatting for the frontend. Use HTML tags like <p>, <br>, <strong>, <ul>, <li> etc. Use appropriate heading tags (<h2>, <h3>, <h4>) to structure the content based on section importance and hierarchy. Do NOT use Markdown.",
+            "recommended_followup": [
+                "suggested actions or questions based on the summary"
+            ],
+            "title": "Concise, descriptive title for the entire conversation that captures the main topic/task. Should remain consistent across the conversation. If the title previously is just 'Chat', then give it another appropriate Title.",
+            "tags": [
+                "2-5 keywords about topics discussed to understand the conversation, lowercase"
+            ],
+            "chat_summary": "Summarize the main topics and key information discussed in this conversation in 2-3 clear, natural sentences (~40-60 words). Use neutral language without 'I/we/you' pronouns."
+        }
+    }
+}
